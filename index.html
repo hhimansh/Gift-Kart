@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>GiftKart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <h1>Gift Kart</h1>
+    <h3>Electronic Gift Shop</h3>
+<!-- table for displaying gift items along with a button each to add to cart -->
+    <table>
+      <tr>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Move to cart</th>
+      </tr>
+      <tr>
+        <td>Wireless Headphones</td>
+        <td>$20</td>
+        <td><button onclick="giftQuantityWH()">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td>Gaming Headset</td>
+        <td>$35</td>
+        <td><button onclick="giftQuantityGH()">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td>Bluetooth Speaker</td>
+        <td>$25</td>
+        <td><button onclick="giftQuantityBS()">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td>Smart Thermostat</td>
+        <td>$30</td>
+        <td><button onclick="giftQuantityST()">Add to cart</button></td>
+      </tr>
+      <tr>
+        <td>Power Bank</td>
+        <td>$15</td>
+        <td><button onclick="giftQuantityPB()">Add to cart</button></td>
+      </tr>
+    </table>
+
+    <button class="checkout" onclick="checkOut()">Checkout</button>
+<!-- table for displaying items added to the cart along with other information -->
+    <p id = "cart">CART</p>
+    <div>
+      <table>
+        <tr>
+          <th>Gifts Bought</th>
+          <th>Quantity</th>
+          <th>Cost</th>
+          <th>Tax</th>
+          <th>Total Cost</th>
+          <th>Name on Gift</th>
+          <th>Shipping Charges</th>
+        </tr>
+        <tr>
+          <td id="content">Content Name</td>
+          <td id="quant">0</td>
+          <td id="totalCost">0</td>
+          <td id="totalTax">0</td>
+          <td id="costAfterTax">0</td>
+          <td id="name">Customer name</td>
+          <td id="shipping">Shipping amount</td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <!-- Reset Button -->
+    <div>
+      <p>Click on reset to start your order from scratch</p>
+      <button class = "reset" onclick="reset()">Reset</button>
+    </div>
+    <br>
+    <!-- Displaying of final Receipt -->
+    <p>Your receipt will display below after the checkout by clicking on the receipt button</p>
+    <button class="receipt" onclick="displayReceipt()">Receipt</button>
+    <br><br>
+    <div id = "displayFinalReceipt">
+      <!-- will contain final receipt -->
+    </div>
+  </body>
+</html>
+<!-- image from Adrien Olichon.(2018). [Image of Sand] [Photograph]. Pexels. https://www.pexels.com/photo/black-and-white-photography-of-sand-2387819/ -->
